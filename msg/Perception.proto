@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package Simplus;
+
+message Pixel {
+  double red = 1;
+  double green = 2;
+  double blue = 3;
+}
+
+message Image {
+  double height = 1;
+  double width = 2;
+  repeated Pixel data = 3;
+}
+
+message Perception {
+  repeated double distance = 1;
+  repeated double heat = 2;
+  repeated double color = 3;
+  repeated double motor_velocity = 4;
+  Image camera = 5;
+}

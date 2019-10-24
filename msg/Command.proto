@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package Simplus;
+
+message Command {
+  repeated double motor = 1;
+  double camera_servo   = 2;
+  double arm            = 3;
+  double gripper        = 4;
+}

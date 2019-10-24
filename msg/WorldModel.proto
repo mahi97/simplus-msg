@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package Simplus;
+
+enum Color {
+  NOCOLOR = 0;
+  RED     = 1;
+  GREEN   = 2;
+  BLUE    = 3;
+  WHITE   = 4;
+  BLACK   = 5;
+  CYAN    = 6;
+  ...
+}
+
+enum Image {
+  NOTHING = 0;
+  WALL    = 1;
+  SIGN    = 2;
+  VICTIM  = 3;
+}
+
+message WorldModel {
+  repeated double distance = 1;
+  repeated double heat = 2;
+  repeated Color color = 3;
+  Image camera = 4;
+}

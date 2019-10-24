@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package Simplus;
+
+enum ARM {
+  NONE = 0;
+  UP   = 1;
+  DOWN = 2;
+}
+
+enum GRIPPER {
+  NONE  = 0;
+  OPEN  = 1;
+  CLOSE = 2;
+}
+
+message Action {
+  repeated double step_forward = 1;
+  repeated double turn_angle   = 2;
+  double camera_angle          = 3;
+  ARM arm                      = 4;
+  GRIPPER gripper              = 5;
+}
