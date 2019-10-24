@@ -40,6 +40,6 @@ $ python -m pip install grpcio --ignore-installed
 Python’s gRPC tools include the protocol buffer compiler protoc and the special plugin for generating server and client code from .proto service definitions. For the first part of our quickstart example, we’ve already generated the server and client stubs from helloworld.proto, but you’ll need the tools for the rest of our quickstart, as well as later tutorials and your own projects.
 
 To install gRPC tools, run:
-`
+```bash
 $ python -m pip install grpcio-tools
-`
+```
